@@ -38,12 +38,12 @@ The plan is to create the GitHub action to this repository and then use it from 
 
 1. **Fork the test repository [hello-world-go](https://github.com/lauravuo/hello-world-go) and create a new feature-branch**
 
-1. **[Add a new job](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#testing-out-your-action-in-a-workflow) to the hello-world-go project [test workflow](https://github.com/lauravuo/hello-world-go/blob/main/.github/workflows/test.yml) where you test the new GitHub Action you created in step 2.**
+1. **[Add a new job](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#example-using-a-public-action) to the hello-world-go project [test workflow](https://github.com/lauravuo/hello-world-go/blob/main/.github/workflows/test.yml) where you test the new GitHub Action you created in step 2.**
    1. Edit the file `test.yml`accordingly
    1. Commit and push changes. See the logs for your added job in Actions tab and check does the job succeed. (_Note: if the maintainer has not released yet the action, it cannot be run._)
    1. Create PR for the change.
 1. **Add actual license checks using lichen.**
-   1. Create new feature-branch for your licence-scan-go-fork.
+   1. Create new feature-branch for your _licence-scan-go_-fork.
    1. Copy content from [this gist](https://gist.github.com/lauravuo/76d675136e1066cf4cab01af04fd9776):
       - Replace contents of `Dockerfile`
       - Replace contents of `entrypoint.sh`
@@ -51,7 +51,7 @@ The plan is to create the GitHub action to this repository and then use it from 
       - Add new file `lichen-cfg.yaml`
    1. Create PR and ask the maintainer to release a new version of the action once the PR is merged.
 1. **Update the action version in the test project**
-   1. Create new feature-branch for your hello-world-go-fork.
+   1. Create new feature-branch for your _hello-world-go_-fork.
    1. Edit the new job that was added in step 4 so that it uses the latest version of the scan action. Commit and push changes, and check that the job succeeds.
    1. Create PR.
 1. **Continue with further enhancements to the licence-scan-go action**:
