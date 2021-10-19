@@ -1,8 +1,9 @@
-# Container image that runs your code
-FROM alpine:3.10
+FROM golang:1.16-alpine3.13
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
+RUN go get github.com/uw-labs/lichen
+
 COPY entrypoint.sh /entrypoint.sh
+COPY lichen.sh /lichen.sh
+COPY lichen-cfg.yaml /lichen-cfg.yaml
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
