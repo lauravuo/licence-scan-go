@@ -11,7 +11,8 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
+      - uses: "lauravuo/action-automatic-releases@test-changes"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
+          auto_generate_release_notes: true
