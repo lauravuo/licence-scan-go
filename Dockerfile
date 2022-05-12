@@ -1,6 +1,6 @@
-FROM golang:1.16-alpine3.13
+FROM golang:1.18-alpine3.15
 
-RUN go get github.com/uw-labs/lichen
+RUN go install github.com/uw-labs/lichen@latest
 
 COPY entrypoint.sh /entrypoint.sh
 COPY lichen.sh /lichen.sh
