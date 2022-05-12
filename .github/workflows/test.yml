@@ -1,0 +1,10 @@
+name: test
+on: push
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: docker image
+        run: docker build -t license-scan-go .
